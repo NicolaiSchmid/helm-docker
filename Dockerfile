@@ -1,7 +1,5 @@
 FROM alpine:latest
 
-RUN apk add --update --no-cache curl openssl
+RUN apk add --update --no-cache curl openssl bash
 
-RUN curl -LO https://git.io/get_helm.sh > get_helm.sh && ash get_helm.sh && rm -rf get_helm.sh
-
-RUN helm init --client-only
+RUN curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 > get_helm.sh && bash get_helm.sh && rm -rf get_helm.sh
