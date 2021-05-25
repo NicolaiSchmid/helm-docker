@@ -10,4 +10,3 @@ FROM alpine:latest
 
 COPY --from=0 /linux-amd64/helm /usr/bin
 
-ENTRYPOINT ["/usr/bin/helm"]
