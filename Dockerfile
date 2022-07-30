@@ -1,5 +1,5 @@
 FROM alpine:latest
-ENV VERSION=v3.7.2
+ENV VERSION=v3.9.2
 
 RUN apk add --update --no-cache curl openssl
 
